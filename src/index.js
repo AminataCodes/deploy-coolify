@@ -10,9 +10,6 @@ import errorHandler from './middlewares/errorHandler.js'
 const PORT = 3000;
 const app=express();
 
-
-
-
 app.use (morgan("dev"));
 app.use(express.json());
 app.get('/',(req,res) =>{
@@ -25,7 +22,7 @@ app.get('/',(req,res) =>{
 app.use ("/api/users", userRouters)
 app.use ("/api/auth", authRouters)
 app.use ("/api/movies", movieRouters)
-app.use ("/api/auth", registerRouter)
+app.use ("/api/register", registerRouter)
 app.use(errorHandler);
 
  app.listen(PORT, () =>{
