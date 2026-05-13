@@ -32,7 +32,7 @@ const getUserById = async(id)=>{
 };
 
 const createUser = async(userData)=> {
-    const createdUser = await prisma.user.create({
+    const createdUser = await prisma.User.create({
         data:{
             email: userData.email,
             name: userData.name,
